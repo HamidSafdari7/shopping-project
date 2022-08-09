@@ -1,0 +1,40 @@
+.slideshow-of-itemslider{
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column !important;
+  align-items: center;
+  position: relative !important;
+}
+
+.picture-of-itemslider{
+  height: 25vh;
+  width: 25vh;
+  object-fit: cover;
+}
+
+.name-of-product{
+  font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 0%;
+    padding:0%;
+    height: 50px;
+}
+
+
+.btn-of-price{
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 3px solid black;
+  font-weight: 600;
+  color: green;
+  border-radius: 5px;
+  padding: 5px 40px 5px 40px;
+  transition: 100ms;
+  text-align: center;
+}
+
+.pragraph2{
+  text-align: center;
+  font-size: 15px;
+}

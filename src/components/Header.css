@@ -1,0 +1,162 @@
+body{
+    overflow-x: hidden;
+}
+.fix_flex_nav_bar{
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+}
+
+.nav_bar{
+    width: 100%;
+    background-color: #fff;
+    height: 117.344px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav_bar_menu{
+    width: 75%;
+    background-color: #fff;
+    height: 117.344px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.nav_item{
+    list-style-type: none;
+    text-align: center;
+    align-self: flex-end;
+    margin-top: 39px;
+    padding: 0%;
+    margin-right: 0%;  
+    text-decoration: none;
+}
+
+.a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.a :hover{
+    color: silver;
+    transition: all ease-in-out 0.4s;
+}
+
+.img_logo{
+    display: flex;
+    flex-direction: row;
+    align-self: inherit;
+}
+
+ul{
+    padding: 0%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+@media (max-width:856px){
+    .shop{
+        visibility: hidden;
+    }
+    .a{
+        visibility: hidden;
+    }
+    
+    .p_style_for_header{
+        font-size: 10px;
+    }
+}
+
+.side_nav_bar{
+    direction: rtl;
+}
+
+.sidenav{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right:-250px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
+}
+
+.items-of-sidenav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .btn_open{
+    font-size:30px;
+    cursor:pointer;
+    margin-top: 28px;
+}
+
+.flex_image_nav_bar_for_mobile_design{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.phone2{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-person{
+    height: 45px;
+    width: 45px;
+    margin-top: 30px;
+    margin-right: 17px;
+}
+
+.p_style_for_header2{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+@media (max-width:855px){
+    .fix_flex_nav_bar{
+        display: none;
+    }
+}
+
+@media (min-width:856px){
+    .side_nav_bar{
+        display: none;
+    }
+}
