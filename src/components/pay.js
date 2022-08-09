@@ -25,7 +25,7 @@ export default function Pay(props){
                     headers: {
                     'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({cartItems , token: value.token})
+                    body: JSON.stringify([{cartItems , token: value.token}])
                 })
                 setCartItems([]);
             }}>done</button>
