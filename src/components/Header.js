@@ -10,7 +10,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { RiQuestionnaireLine } from 'react-icons/ri';
 import { AiOutlineForm } from 'react-icons/ai';
 import { BiExit } from 'react-icons/bi';
-import { BsReverseLayoutTextWindowReverse } from 'react-icons/bs';
+import { BsFileEarmarkText } from 'react-icons/bs';
 
 export default function Header(){
 
@@ -57,7 +57,7 @@ export default function Header(){
                             
                       </ul>
                       <ul>
-                            <Link to="/products" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>محصولات</strong><BsReverseLayoutTextWindowReverse/></li></Link>
+                            <Link to="/products" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>محصولات</strong><BsFileEarmarkText/></li></Link>
                       </ul>
                       <ul>
                             <li className="nav_item"><a href="#" className="a"><strong>تماس با ما</strong></a><FiPhoneCall/></li>
