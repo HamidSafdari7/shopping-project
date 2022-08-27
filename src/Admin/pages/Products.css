@@ -1,0 +1,72 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th{
+    border-bottom: 1px solid black;
+}
+
+td{
+    border-bottom: 1px solid silver;
+    border-collapse: collapse;
+}
+
+.btnOfAdd{
+    width: 70px;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: crimson;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+}
+
+.ipnut-of-register{
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 35px;
+}
+
+.textarea-of-add{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 1rem;
+}
+
+.p-of-validate{
+    color: red;
+    font-weight: bold;
+}
+
+.NavbarWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchbar{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 35px;
+}
+@media (max-width:900px){
+    .NavbarWrapper{
+        flex-direction: column;
+    }
+    .searchbar{
+        width: 150px;
+    }
+} 

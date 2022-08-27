@@ -22,6 +22,7 @@ import Pay from "./components/pay";
 import Login from "./components/login";
 import UseToken from "./components/useToken";
 import Register from "./components/register";
+import AdminPanel from "./components/AdminPanel";
 
 export const UserContext = React.createContext();
 
@@ -76,6 +77,7 @@ export default function App(){
             <Route path="/pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
             <Route path="/login" element={<Login setToken={setToken}/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="/test" element={<AdminPanel/>}/>
             {/* <Route path="/test" element={<Test/>}/> */} 
           </Routes>
           <Footer/>
