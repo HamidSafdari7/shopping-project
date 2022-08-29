@@ -22,12 +22,13 @@ import Pay from "./components/pay";
 import Login from "./components/login";
 import UseToken from "./components/useToken";
 import Register from "./components/register";
-import AdminPanel from "./components/AdminPanel";
+import App from "./Admin/App"
+import { ContextProvider } from "./Admin/contexts/ContextProvider";
 
 export const UserContext = React.createContext();
 
 
-export default function App(){
+export default function MainApp(){
 
   const { token, setToken } = UseToken();
   const [cartItems, setCartItems] = useState(() => {
@@ -77,7 +78,7 @@ export default function App(){
             <Route path="/pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
             <Route path="/login" element={<Login setToken={setToken}/>}/>
             <Route path="/register" element={<Register/>}/>
-            <Route path="/test" element={<AdminPanel/>}/>
+            <Route path="/test" element={<ContextProvider><App /></ContextProvider>}/>
             {/* <Route path="/test" element={<Test/>}/> */} 
           </Routes>
           <Footer/>
@@ -86,4 +87,4 @@ export default function App(){
     );
   }
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<MainApp/>, document.getElementById("root"));

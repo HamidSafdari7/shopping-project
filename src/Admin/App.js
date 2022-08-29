@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dashboard, Orders, Customers , Products, UpdateProducts , UpdateUsers } from './pages';
+import { Dashboard, Orders, Customers , AdminProducts, UpdateProducts , UpdateUsers } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -70,7 +70,7 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      <BrowserRouter>
+      
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
@@ -122,7 +122,7 @@ const App = () => {
                   setName={setName} setAddress={setAddress} setPhone={setPhone} setPassword={setPassword}
                   setUsername={setUsername} setId={setId} 
                 />} />
-                <Route path="/Products" element={<Products 
+                <Route path="/AdminProducts" element={<AdminProducts 
                   name={name} image={image} price={price} id={id}
                   setName={setName} setImage={setImage} setPrice={setPrice} setId={setId}
                 />} />
@@ -142,7 +142,7 @@ const App = () => {
             <Footer />
           </div>
         </div>
-      </BrowserRouter>
+      
     </div>
   );
 };

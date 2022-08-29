@@ -1,5 +1,5 @@
 import React , {useState , useEffect , useMemo} from 'react';
-import "./Products.css";
+import "./AdminProducts.css";
 import { Header } from '../components';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -25,7 +25,7 @@ const style = {
 
   
 
-export default function Products(props){
+export default function AdminProducts(props){
     const [product , setProduct] = React.useState([]);
     const {name , setName , image , setImage , price , setPrice , id , setId} = props;
     React.useEffect(() =>

@@ -6,7 +6,7 @@ import App from './App';
 import { ContextProvider } from './contexts/ContextProvider';
 
 
-export default function Admin(){
+
   ReactDOM.render(
     <React.StrictMode>
       <ContextProvider>
@@ -15,4 +15,4 @@ export default function Admin(){
     </React.StrictMode>,
     document.getElementById('root'),
   );
-}
+
