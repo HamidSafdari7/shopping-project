@@ -119,7 +119,7 @@ function InfoOfCustomers(props){
                           <td align='center'>{x.password}</td>
                           <td align='center'>{x.id}</td>
                           <td align='center'><button onClick={()=>deleteOperation(x.id)}><RiDeleteBin6Line/></button></td>
-                          <td align='center'><Link to="/UpdateUsers"><button onClick={() => selectUser(x.id)}><RiEdit2Line/></button></Link></td>
+                          <td align='center'><Link to="/Admin/UpdateUsers"><button onClick={() => selectUser(x.id)}><RiEdit2Line/></button></Link></td>
                         </tr>
                     ))}
                    

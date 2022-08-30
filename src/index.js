@@ -24,6 +24,13 @@ import UseToken from "./components/useToken";
 import Register from "./components/register";
 import App from "./Admin/App"
 import { ContextProvider } from "./Admin/contexts/ContextProvider";
+import { Dashboard } from "./Admin/pages";
+import {Orders} from "./Admin/pages";
+import {Customers} from "./Admin/pages";
+import {AdminProducts} from "./Admin/pages";
+import {UpdateProducts} from "./Admin/pages";
+import {UpdateUsers} from "./Admin/pages";
+
 
 export const UserContext = React.createContext();
 
@@ -78,7 +85,17 @@ export default function MainApp(){
             <Route path="/pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
             <Route path="/login" element={<Login setToken={setToken}/>}/>
             <Route path="/register" element={<Register/>}/>
-            <Route path="/test" element={<ContextProvider><App /></ContextProvider>}/>
+            <Route path="/Admin" element={<ContextProvider><App /></ContextProvider>}>
+              {/* dashboard  */}
+              <Route path="/Admin" element={(<Dashboard />)} />
+              <Route path="Dashboard" element={(<Dashboard />)} />
+              {/* pages  */}
+              <Route path="Orders" element={(<Orders />)} />
+              <Route path="customers" element={(<Customers />)} />
+              <Route path="AdminProducts" element={(<AdminProducts />)} />
+              <Route path="UpdateProducts" element={(<UpdateProducts />)} />
+              <Route path="UpdateUsers" element={(<UpdateUsers />)} />
+            </Route>
             {/* <Route path="/test" element={<Test/>}/> */} 
           </Routes>
           <Footer/>

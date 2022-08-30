@@ -248,7 +248,7 @@ function InfoOfProducts(props){
                           <td align='center'>{x.price}</td>
                           <td align='center'>{x.id}</td>
                           <td align='center'><button onClick={()=>deleteOperation(x.id)}><RiDeleteBin6Line/></button></td>
-                          <td align='center'><Link to="/UpdateProducts"><button onClick={() => selectProduct(x.id)}><RiEdit2Line/></button></Link></td>
+                          <td align='center'><Link to="/Admin/UpdateProducts"><button onClick={() => selectProduct(x.id)}><RiEdit2Line/></button></Link></td>
                         </tr>
                     ))}
                    
