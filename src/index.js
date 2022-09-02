@@ -8,7 +8,8 @@ import {
     Routes,
     Switch,
     BrowserRouter,
-    useParams
+    useParams,
+    Outlet
 } from "react-router-dom";
 import './index.css';
 import Header from './components/Header';
@@ -31,6 +32,16 @@ import {AdminProducts} from "./Admin/pages";
 import {UpdateProducts} from "./Admin/pages";
 import {UpdateUsers} from "./Admin/pages";
 
+
+function BasicLayout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  )
+}
 
 export const UserContext = React.createContext();
 
@@ -77,14 +88,17 @@ export default function MainApp(){
     return(
       <UserContext.Provider value={{token,setToken}}>
         <BrowserRouter>
-          <Header/>
+      
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/products" element={<Products cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
-            <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
-            <Route path="/pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
-            <Route path="/login" element={<Login setToken={setToken}/>}/>
-            <Route path="/register" element={<Register/>}/>
+            <Route path="/" element={<BasicLayout />}>
+              <Route index element={<Home/>}/>
+              <Route path="products" element={<Products cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
+              <Route path="cart" element={<Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
+              <Route path="pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
+              <Route path="login" element={<Login setToken={setToken}/>}/>
+              <Route path="register" element={<Register/>}/>
+            </Route>
+            
             <Route path="/Admin" element={<ContextProvider><App /></ContextProvider>}>
               {/* dashboard  */}
               <Route path="/Admin" element={(<Dashboard />)} />
@@ -98,7 +112,7 @@ export default function MainApp(){
             </Route>
             {/* <Route path="/test" element={<Test/>}/> */} 
           </Routes>
-          <Footer/>
+        
         </BrowserRouter>
       </UserContext.Provider>
     );
