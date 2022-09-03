@@ -31,6 +31,8 @@ import {Customers} from "./Admin/pages";
 import {AdminProducts} from "./Admin/pages";
 import {UpdateProducts} from "./Admin/pages";
 import {UpdateUsers} from "./Admin/pages";
+import AdminLogin from "./components/AdminLogin";
+import AdminuseToken from "./components/AdminuseToken";
 
 
 function BasicLayout() {
@@ -49,6 +51,7 @@ export const UserContext = React.createContext();
 export default function MainApp(){
 
   const { token, setToken } = UseToken();
+  const { admintoken, setAdmintoken } = AdminuseToken();
   const [cartItems, setCartItems] = useState(() => {
     const saved = localStorage.getItem("cartItems");
     const initialValue = JSON.parse(saved);
@@ -86,7 +89,7 @@ export default function MainApp(){
   };
 
     return(
-      <UserContext.Provider value={{token,setToken}}>
+      <UserContext.Provider value={{token,setToken , admintoken , setAdmintoken}}>
         <BrowserRouter>
       
           <Routes>
@@ -97,6 +100,7 @@ export default function MainApp(){
               <Route path="pay" element={<Pay setCartItems={setCartItems} cartItems={cartItems}/>}/>
               <Route path="login" element={<Login setToken={setToken}/>}/>
               <Route path="register" element={<Register/>}/>
+              <Route path="AdminLogin" element={<AdminLogin setAdmintoken={setAdmintoken}/>}/>
             </Route>
             
             <Route path="/Admin" element={<ContextProvider><App /></ContextProvider>}>

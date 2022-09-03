@@ -6,8 +6,18 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { links } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
+import AdminuseToken from '../../components/AdminuseToken';
+import { UserContext } from '../..';
+import { BiExit } from 'react-icons/bi';
 
 const Sidebar = () => {
+  const value = React.useContext(UserContext);
+  const { admintoken, setAdmintoken } = AdminuseToken();
+
+  const logout = () => {
+    sessionStorage.removeItem('admintoken');
+    value.setAdmintoken(false);
+  };
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const handleCloseSideBar = () => {
@@ -60,6 +70,9 @@ const Sidebar = () => {
                 ))}
               </div>
             ))}
+            <div>
+              {value.admintoken ? <Link to="/" onClickCapture={logout}><BiExit className="text-gray-400 dark:text-gray-400 ml-6 mt-10 uppercase capitalize"/><span className="text-gray-400 dark:text-gray-400 ml-6  uppercase capitalize">Exit</span ></Link> : ""}
+            </div>
           </div>
         </>
       )}

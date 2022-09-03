@@ -8,10 +8,20 @@ import { Dashboard, Orders, Customers , AdminProducts, UpdateProducts , UpdateUs
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+import { useNavigate } from "react-router-dom";
+import AdminuseToken from '../components/AdminuseToken';
+import { UserContext } from '..';
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-
+  const value = React.useContext(UserContext);
+  const { admintoken, setAdmintoken } = AdminuseToken();
+  const navigate = useNavigate();
+    useEffect(()=>{
+        if(!admintoken){
+            navigate("/AdminLogin")
+        }
+    })
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
     const currentThemeMode = localStorage.getItem('themeMode');
