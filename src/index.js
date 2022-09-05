@@ -33,6 +33,7 @@ import {UpdateProducts} from "./Admin/pages";
 import {UpdateUsers} from "./Admin/pages";
 import AdminLogin from "./components/AdminLogin";
 import AdminuseToken from "./components/AdminuseToken";
+import PageNotFound from "./components/PageNotFound";
 
 
 function BasicLayout() {
@@ -114,7 +115,8 @@ export default function MainApp(){
               <Route path="UpdateProducts" element={(<UpdateProducts />)} />
               <Route path="UpdateUsers" element={(<UpdateUsers />)} />
             </Route>
-            {/* <Route path="/test" element={<Test/>}/> */} 
+
+            <Route path="*" element={<PageNotFound/>}/>
           </Routes>
         
         </BrowserRouter>
