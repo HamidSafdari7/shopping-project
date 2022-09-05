@@ -74,7 +74,7 @@ function InformationsOfProducts(props){
                     <div className="number-of-products">
                       {cartItems.length}
                     </div>
-                    <FaShoppingCart/>
+                    <FaShoppingCart style={{marginLeft:"auto" , marginRight:"auto"}}/>
                 </button>
                 {modalOpen && <Modal setOpenModal={setModalOpen} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />}
             </div>

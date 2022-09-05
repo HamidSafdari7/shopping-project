@@ -111,32 +111,32 @@
     }
 }
 .button-of-cart{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
 }
 .button-for-remove{
-  font-size: 1.5rem;
-  padding: 0.2rem;
-  margin: 0.1rem;
-  border-radius: 0.5rem;
-  border: 0.1rem #404040 solid;
-  background-color: #f04040;
-  cursor: pointer;
-  width: 50px;
-  height: 40px;
+  font-size: 1.5rem !important;
+  padding: 0.2rem !important;
+  margin: 0.1rem !important;
+  border-radius: 0.5rem !important;
+  border: 0.1rem #404040 solid !important;
+  background-color: #f04040 !important;
+  cursor: pointer !important;
+  width: 50px !important;
+  height: 40px !important;
 }
 
 .button-for-add{
-  font-size: 1.5rem;
-  padding: 0.2rem;
-  margin: 0.1rem;
-  border-radius: 0.5rem;
-  border: 0.1rem #404040 solid;
-  background-color: #40c0f0;
-  cursor: pointer;
-  width: 50px;
-  height: 40px;
+  font-size: 1.5rem !important;
+  padding: 0.2rem !important;
+  margin: 0.1rem !important;
+  border-radius: 0.5rem !important;
+  border: 0.1rem #404040 solid !important;
+  background-color: #40c0f0 !important;
+  cursor: pointer !important;
+  width: 50px !important;
+  height: 40px !important;
 }
 
 .totalPrice{
@@ -146,24 +146,24 @@
 }
 
 .body-of-payButton{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: row !important;
 }
 .payButton{
-    margin-top: 10px;
-    font-size: 1.2rem;
-    border: 3px solid black;
-    font-weight: 600;
-    color: green;
-    border-radius: 5px;
-    padding: 5px 40px 5px 40px;
-    transition: 1s;
-    text-align: center;
-    margin-bottom: 15px;
-    cursor: pointer;
+    margin-top: 10px !important;
+    font-size: 1.2rem !important;
+    border: 3px solid black !important;
+    font-weight: 600 !important;
+    color: green !important;
+    border-radius: 5px !important;
+    padding: 5px 40px 5px 40px !important;
+    transition: 1s !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    cursor: pointer !important;
 }
 .payButton:hover{
-    color: white;
-      background-color: #6b9658;
+    color: white !important;
+      background-color: #6b9658 !important;
   }

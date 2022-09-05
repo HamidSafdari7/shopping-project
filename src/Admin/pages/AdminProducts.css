@@ -15,14 +15,14 @@ td{
 }
 
 .btnOfAdd{
-    width: 70px;
-    height: 35px;
-    margin: 10px;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: crimson;
+    width: 70px !important;
+    height: 35px !important;
+    margin: 10px !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    background-color: crimson !important;
 }
 
 .wrapper{

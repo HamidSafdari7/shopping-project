@@ -36,31 +36,31 @@ export default function Header(){
               <div className="nav_bar">
                   <div className="nav_bar_menu">
                       <ul>
-                            <li className="nav_item"><a href="#" className="a"><strong>درباره ما</strong></a><RiQuestionnaireLine/></li>
+                            <li className="nav_item"><a href="#" className="a"><RiQuestionnaireLine/><strong>درباره ما</strong></a></li>
                             
                       </ul>
                       <ul>
-                            {value.token ? <li onClickCapture={logout} className="nav_item a"><strong>خروج از حساب کاربری</strong><BiExit/></li> 
+                            {value.token ? <li onClickCapture={logout} className="nav_item a"><BiExit/><strong>خروج از حساب کاربری</strong></li> 
                                 :
-                            <Link to="/register" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>ثبت نام</strong><AiOutlineForm/></li></Link>}
+                            <Link to="/register" style={{ textDecoration: 'none' }}><li className="nav_item a"><AiOutlineForm/><strong>ثبت نام</strong></li></Link>}
                             
                       </ul>
                       <ul>
-                            <Link to="/cart" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>سبد خرید</strong><BsCart3/></li></Link>
+                            <Link to="/cart" style={{ textDecoration: 'none' }}><li className="nav_item a"><BsCart3/><strong>سبد خرید</strong></li></Link>
                             
                       </ul>
                       <div className="img_logo">
                         <img src="images/logo.jpg"></img>
                       </div>
                       <ul>
-                            <Link to="/" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>صفحه نخست</strong><IoHomeOutline/></li></Link>
+                            <Link to="/" style={{ textDecoration: 'none' }}><li className="nav_item a"><IoHomeOutline/><strong>صفحه نخست</strong></li></Link>
                             
                       </ul>
                       <ul>
-                            <Link to="/products" style={{ textDecoration: 'none' }}><li className="nav_item a"><strong>محصولات</strong><BsFileEarmarkText/></li></Link>
+                            <Link to="/products" style={{ textDecoration: 'none' }}><li className="nav_item a"><BsFileEarmarkText/><strong>محصولات</strong></li></Link>
                       </ul>
                       <ul>
-                            <li className="nav_item"><a href="#" className="a"><strong>تماس با ما</strong></a><FiPhoneCall/></li>
+                            <li className="nav_item"><a href="#" className="a"><FiPhoneCall/><strong>تماس با ما</strong></a></li>
                             
                       </ul>
                   </div>

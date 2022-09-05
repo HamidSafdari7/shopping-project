@@ -99,22 +99,22 @@ body{
 }
 
 .img-of-cart{
-  width: 100px;
-  height: 50px;
-  background-color:#6b9658;
-  font-size: 25px;
-  color: white;
-  border: 2px solid silver;
-  border-radius: 15px;
-  align-items: center;
-  cursor: pointer;
+  width: 100px !important;
+  height: 50px !important;
+  background-color:#6b9658 !important;
+  font-size: 25px !important;
+  color: white !important;
+  border: 2px solid silver !important;
+  border-radius: 15px !important;
+  align-items: center !important;
+  cursor: pointer !important;
 }
 
 .number-of-products{
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   font-size: 15px !important;
-  color: white;
+  color: white !important;
 }
 
   @media (max-width:600px){
