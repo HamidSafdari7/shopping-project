@@ -1,5 +1,8 @@
 import "./register.css";
 import React, { useEffect, useState } from "react";
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { MdOutlineAdminPanelSettings } from 'react-icons/md';
+import { Link } from "react-router-dom";
 
 export default function Register(){
 
@@ -85,60 +88,75 @@ export default function Register(){
 
     return(
         <div className="bodyOfRegister">
-        
-        <div className="register-wrapper">
-            <h1>به صفحه ثبت نام خوش آمدید !</h1>
-            <p> لطفا اطلاعات خواسته شده را با دقت ثبت کنید, از همکاری شما سپاسگذاریم .</p>
-            <form >
-                <label>
-                    <h3>Name:</h3>
-                    <input className="ipnut-of-register" type="text" name="name" value={formValues.name}
-                    onChange = {handleChange} placeholder="نام و نام خانوادگی">
-                    </input>
-                </label>
-                <p className="p-of-validate">{formErrors.name}</p>
-                <label>
-                    <h3>User name:</h3>
-                    <input className="ipnut-of-register" type="text" name="username" value={formValues.username}
-                    onChange = {handleChange} placeholder="نام کاربری">
-                    </input>
-                </label>
-                <p className="p-of-validate">{formErrors.username}{validation}</p>
-                <label>
-                    <h3>Password:</h3>
-                    <input className="ipnut-of-register" type="password" name="password" value={formValues.password}
-                    onChange = {handleChange} placeholder="رمز عبور">
-                    </input>
-                </label>
-                <p className="p-of-validate">{formErrors.password}</p>
-                <label>
-                    <h3>Phone:</h3>
-                    <input className="ipnut-of-register" type="tel" name="phone" value={formValues.phone}
-                    onChange = {handleChange} placeholder="تلفن همراه">
-                    </input>
-                </label>
-                <p className="p-of-validate">{formErrors.phone}</p>
-                <label>
-                    <h3>Address:</h3>
-                    <textarea className="textarea-of-register" type="text" name="address" value={formValues.address}
-                    onChange = {handleChange} placeholder="آدرس">
-                    </textarea>
-                </label>
-                <p className="p-of-validate">{formErrors.address}</p>
-            </form>
-            <div className='btnregister'>
-                <a  
-                onClick={(e) => {
-                handleSubmit(e)
-                }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    ثبت نام
-                </a>
+            <div className="fixed right-5 bottom-4" style={{ zIndex: '1000' }}>
+                <TooltipComponent
+                content="پنل مدیریت"
+                position="Top"
+                >
+                    <Link to="/Admin">
+                        <button
+                            type="button"
+                            style={{ background: "#e60f4f", borderRadius: '50%' }}
+                            className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                        >
+                            <MdOutlineAdminPanelSettings />
+                        </button>
+                    </Link>
+                </TooltipComponent>
+            </div>
+            <div className="register-wrapper">
+                <h1>به صفحه ثبت نام خوش آمدید !</h1>
+                <p> لطفا اطلاعات خواسته شده را با دقت ثبت کنید, از همکاری شما سپاسگذاریم .</p>
+                <form >
+                    <label>
+                        <h3>Name:</h3>
+                        <input className="ipnut-of-register" type="text" name="name" value={formValues.name}
+                        onChange = {handleChange} placeholder="نام و نام خانوادگی">
+                        </input>
+                    </label>
+                    <p className="p-of-validate">{formErrors.name}</p>
+                    <label>
+                        <h3>User name:</h3>
+                        <input className="ipnut-of-register" type="text" name="username" value={formValues.username}
+                        onChange = {handleChange} placeholder="نام کاربری">
+                        </input>
+                    </label>
+                    <p className="p-of-validate">{formErrors.username}{validation}</p>
+                    <label>
+                        <h3>Password:</h3>
+                        <input className="ipnut-of-register" type="password" name="password" value={formValues.password}
+                        onChange = {handleChange} placeholder="رمز عبور">
+                        </input>
+                    </label>
+                    <p className="p-of-validate">{formErrors.password}</p>
+                    <label>
+                        <h3>Phone:</h3>
+                        <input className="ipnut-of-register" type="tel" name="phone" value={formValues.phone}
+                        onChange = {handleChange} placeholder="تلفن همراه">
+                        </input>
+                    </label>
+                    <p className="p-of-validate">{formErrors.phone}</p>
+                    <label>
+                        <h3>Address:</h3>
+                        <textarea className="textarea-of-register" type="text" name="address" value={formValues.address}
+                        onChange = {handleChange} placeholder="آدرس">
+                        </textarea>
+                    </label>
+                    <p className="p-of-validate">{formErrors.address}</p>
+                </form>
+                <div className='btnregister'>
+                    <a  
+                    onClick={(e) => {
+                    handleSubmit(e)
+                    }}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        ثبت نام
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     );
 }

@@ -16,19 +16,35 @@ export default function Pay(props){
         }
     })
 
+    const Alert = () => {
+        alert("محصول با موفقیت ثبت شد");
+      }
+
     return(
         <div className="pay">
-            <h1 className="p-of-pay">صفحه پرداخت</h1>
-            <button onClick={() =>{
-                fetch('http://localhost:3001/cart', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({cartItems , token: value.token})
-                })
-                setCartItems([]);
-            }}>done</button>
+            <p>با فشردن دکمه " ثبت سفارش " محصول شما با موفقیت ثبت خواهد شد و در اسرع وقت به آدرس شما ارسال میگردد , هزینه محصول را پس از دریافت درب منزل پرداخت کنید از همکاری شما سپاسگذاریم</p>
+            <div className='btnpay'>
+                <a onClick={() =>{
+                    fetch('http://localhost:3001/cart', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({cartItems , token: value.token})
+                    })
+                    .then((x)=>{
+                        
+                        Alert()
+                    })
+                    setCartItems([]);
+                }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    ثبت سفارش
+                </a>
+            </div>
         </div>
     );
 }
